@@ -1,21 +1,35 @@
-import { Navbar, Typography } from "@material-tailwind/react";
+
 import Link from "next/link";
 
 export default function Header() {
   return (
-    <Navbar className="mx-auto max-w-screen-xl p-4 bg-white shadow-md">
-      <div className="flex items-center justify-between text-blue-gray-900">
-        <Typography as="a" href="/" variant="h5" className="cursor-pointer">
-          My Portfolio
-        </Typography>
-        <div className="flex space-x-6">
-          <Link href="/" className="hover:text-blue-500">Home</Link>
-          <Link href="/about" className="hover:text-blue-500">About</Link>
-          <Link href="/projects" className="hover:text-blue-500">Projects</Link>
-          <Link href="/contact" className="hover:text-blue-500">Contact</Link>
+    <header className="bg-blueGray-200  shadow-md">
+      <div className="mx-auto flex max-w-screen-xl items-center justify-between p-4">
+
+        <div className="flex items-center space-x-2">
+  
+          <h1 className="text-xl font-semibold text-gray-800 cursor-pointer">
+            My Portfolio
+          </h1>
         </div>
+
+        <nav className="hidden md:flex items-center space-x-4">
+          <Link href="/" className="px-4 py-2  hover:text-blue-500">
+            Home
+          </Link>
+          <Link href="/about" className="px-4 py-2 hover:text-blue-500">
+            About
+          </Link>
+          <Link href="/projects" className="px-4 py-2 hover:text-blue-500">
+            Projects
+          </Link>
+          <Link href="/contact" className="px-4 py-2 hover:text-blue-500">
+            Contact
+          </Link>
+        </nav>
       </div>
-    </Navbar>
+    </header>
   );
 }
+
 
